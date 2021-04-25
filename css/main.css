@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+body #background-video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -2;
+}
+
+body h1 {
+  color: white;
+  font-size: 4rem;
+}
+
+body .switch-container {
+  width: 150px;
+  height: 100px;
+  border: 2px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+  color: white;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .switch-container #switch {
+  width: 50%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  left: 0;
+}
+
+body .switch-container #start {
+  color: black;
+}
+
+body .switch-container.slide #switch {
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  left: 50%;
+}
+
+body .switch-container.slide #start {
+  color: white;
+}
+
+body .switch-container.slide #pause {
+  color: black;
+}
+
+body ::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+#preload-container {
+  background: white;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.hide-preloader {
+  visibility: hidden;
+  z-index: -100;
+}
+/*# sourceMappingURL=main.css.map */
